@@ -39,6 +39,7 @@ async function onFormSubmit(event) {
 
   currentQuery = query;
   currentPage = 1;
+
   clearGallery();
   hideLoadMoreButton();
   showLoader();
@@ -57,9 +58,10 @@ async function onFormSubmit(event) {
     }
 
     createGallery(hits);
+
     totalPages = Math.ceil(totalHits / PER_PAGE);
 
-    if (currentPage < totalPages) {
+    if (totalPages > 1) {
       showLoadMoreButton();
     } else {
       hideLoadMoreButton();
@@ -81,6 +83,7 @@ async function onFormSubmit(event) {
 
 async function onLoadMore() {
   currentPage += 1;
+
   hideLoadMoreButton();
   showLoader();
 
