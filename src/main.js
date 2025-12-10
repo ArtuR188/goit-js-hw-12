@@ -21,6 +21,8 @@ let currentQuery = '';
 let currentPage = 1;
 let totalPages = 0;
 
+hideLoadMoreButton();
+
 formEl.addEventListener('submit', onFormSubmit);
 loadMoreBtnEl.addEventListener('click', onLoadMore);
 

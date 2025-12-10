@@ -53,9 +53,9 @@ export function hideLoader() {
 }
 
 export function showLoadMoreButton() {
-  loadMoreBtnEl.classList.remove('is-hidden');
+  loadMoreBtnEl.style.display = 'block';
 }
 
 export function hideLoadMoreButton() {
-  loadMoreBtnEl.classList.add('is-hidden');
+  loadMoreBtnEl.style.display = 'none';
 }
